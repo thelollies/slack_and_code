@@ -4,6 +4,3 @@ h1 {
     font-family: 'Source Sans Pro', sans-serif`
     min-height: 1px
 }
-h2##{aDomId} {
-    color: #990
-}
