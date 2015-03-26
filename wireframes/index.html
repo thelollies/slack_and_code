@@ -10,8 +10,8 @@
       margin-top: 0.8em;
     }
     .header {
-      margin-top: 1em;
-      margin-bottom: 1em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
       font-family: 'Josefin Slab', serif;
       font-size: 2em;
     }
@@ -40,10 +40,24 @@
 
     .navbar-links{
       float: right;
+      margin-bottom: 1em;
     }
+
+    .navbar-links a:link{
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-family: 'Josefin Slab', serif;
+    }
+    .navbar-links a:visited { color: black;}
+    .navbar-links a:hover { text-decoration: underline; }
 
     .header-div{
       float: left;
+    }
+
+    .navdivider{
+      color: #B4B4B4;
     }
   </style>
 </head>
@@ -54,8 +68,13 @@
       <div class='content-grid grid__col grid__col--1-of-2'>
         <div class='header-div header'>Slack and Code</div>
       </div>
-      <div class='content-grid grid__col grid__col--1-of-2'>
-        <div class='navbar-links'><a href='#'>Test</a></div>
+      <div class='content-grid grid__col grid__col--1-of-2' style='vertical-align: bottom;'>
+        <div class='navbar-links'>
+          <a href='#'>Home</a><span class='navdivider'>&nbsp; | &nbsp;</span>
+          <a href='#'>Slack</a><span class='navdivider'>&nbsp; | &nbsp;</span>
+          <a href='#'>Code</a><span class='navdivider'>&nbsp; | &nbsp;</span>
+          <a href='#'>About</a>
+        </div>
       </div>
     </div>
   </div>
