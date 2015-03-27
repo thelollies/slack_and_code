@@ -1,20 +1,23 @@
 <html>
 <head>
+  <!-- Basic page data -->
+  <meta charset='utf-8'>
+  <title>Slack and Code</title>
+
+  <!-- Mobile specific meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/toast/grid.css">
-  <title>Slack and Code</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/skeleton/normalize.css">
+  <link rel="stylesheet" href="css/skeleton/skeleton.css">
+
+  <!-- Styles -->
   <style type='text/css'>
-    body {
-      margin-top: 0.8em;
-    }
-    .header {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      font-family: 'Josefin Slab', serif;
-      font-size: 2em;
-    }
     hr {
       border: none;
       color: lightgrey;
@@ -25,8 +28,6 @@
       font-family: 'Josefin Sans', sans-serif;
       font-size: 4em;
     }
-    h2 {
-    }
 
     p {
       font-family: 'Open Sans', sans-serif;
@@ -34,78 +35,204 @@
       word-spacing: 0.1em;
     }
 
-    .content-grid{
-      max-width: 45em;
+    .header {
+      font-family: 'Josefin Slab', serif;
+      font-size: 2em;
+      line-height: 1.1em;
+      height: 0.8em;
     }
 
     .navbar-links{
-      float: right;
-      margin-bottom: 1em;
-    }
-
-    .navbar-links a:link{
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
+      text-align:  right;
+      color:       black;
       font-family: 'Josefin Slab', serif;
+      line-height: 1em;
     }
-    .navbar-links a:visited { color: black;}
-    .navbar-links a:hover { text-decoration: underline; }
+    .navbar-links a:link{    text-decoration: none; }
+    .navbar-links a:visited{ color: black; }
+    .navbar-links a:hover{   text-decoration: underline; }
 
-    .header-div{
-      float: left;
+    .navdivider{ color: #B4B4B4; }
+
+    .container{
+      max-width: 44em;
     }
 
-    .navdivider{
-      color: #B4B4B4;
+    hr.no-vertical-margin{ margin-top: 0; margin-bottom: 0 }
+
+    .content.row{
+      margin-top: 2.5em;
+    }
+
+    .col-header{
+      height: 1.6em;
+      margin-top: 2.5em;
+      margin-bottom: 2.5em;
+    }
+
+    .pos-relative{ position: relative; }
+    .pos-bottom-right{ position: absolute; bottom: 0; right: 0; }
+
+
+
+
+
+
+    /* nav */
+    .nav {
+      position: relative;
+      margin: 20px 0;
+    }
+    .nav ul {
+      margin: 0;
+      padding: 0;
+    }
+    .nav li {
+      margin: 0 5px 10px 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+    }
+    .nav a {
+      padding: 3px 12px;
+      text-decoration: none;
+      color: #999;
+      line-height: 100%;
+    }
+    .nav a:hover {
+      color: #000;
+    }
+    /* right nav */
+    .nav.right ul {
+      text-align: right;
+    }
+
+
+
+
+    @media screen and (max-width: 700px) {
+      .nav {
+        position: relative;
+        min-height: 40px;
+      }	
+      .nav ul {
+        width: 180px;
+        padding: 5px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid 1px #aaa;
+        content: 'askjdbfajkshdbf';
+        background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);
+      }
+      .nav li {
+        display: none; /* hide all <li> items */
+        margin: 0;
+      }
+      .nav .current {
+        display: block; /* show only current <li> item */
+      }
+      .nav a {
+        display: block;
+        padding: 5px 5px 5px 32px;
+        text-align: left;
+      }
+      .nav .current a {
+        background: none;
+        color: #666;
+      }
+
+      /* on nav hover */
+      .nav ul:hover {
+        background-image: none;
+      }
+      .nav ul:hover li {
+        display: block;
+        margin: 0 0 5px;
+      }
+
+      /* right nav */
+      .nav.right ul {
+        left: auto;
+        right: 0;
+      }
+
+      /* center nav */
+      .nav.center ul {
+        left: 50%;
+        margin-left: -90px;
+      }
+
     }
   </style>
 </head>
 <body>
-<div class='grid'>
-  <div class='content-grid grid__col grid__col--6-of-8 grid__col--centered'>
-    <div class='grid'>
-      <div class='content-grid grid__col grid__col--1-of-2'>
-        <div class='header-div header'>Slack and Code</div>
+<div class='container'>
+
+
+  <div class='row col-header'>
+
+    <div class='twelve columns'>
+
+      <div class='one-half column'>
+        <div class='header'>Slack and Code</div>
       </div>
-      <div class='content-grid grid__col grid__col--1-of-2' style='vertical-align: bottom;'>
-        <div class='navbar-links'>
-          <a href='#'>Home</a><span class='navdivider'>&nbsp; | &nbsp;</span>
-          <a href='#'>Slack</a><span class='navdivider'>&nbsp; | &nbsp;</span>
-          <a href='#'>Code</a><span class='navdivider'>&nbsp; | &nbsp;</span>
-          <a href='#'>About</a>
-        </div>
+
+      <div class='one-half column pos-relative'>
+
+        <nav class="nav right navbar-links">
+          <ul>
+            <a href="#">Home</a>
+            <li><a href="#">Slack</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <!-- <div class='navbar-links pos-bottom-right'> -->
+        <!--   <a href='#'>Home</a><span class='navdivider'>&nbsp; | &nbsp;</span> -->
+        <!--   <a href='#'>Slack</a><span class='navdivider'>&nbsp; | &nbsp;</span> -->
+        <!--   <a href='#'>Code</a><span class='navdivider'>&nbsp; | &nbsp;</span> -->
+        <!--   <a href='#'>About</a> -->
+        <!-- </div> -->
+
       </div>
+
+    </div>
+
+  </div>
+
+
+  <div class='row'>
+    <div class='twelve columns'>
+      <hr class='no-vertical-margin'>
     </div>
   </div>
-  <div class='content-grid grid__col grid__col--6-of-8 grid__col--centered'>
-    <hr>
+  <div class='content row'>
+    <div class='twelve columns'>
+      <h1>Bulletproof Android Syncing</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lorem libero. Duis laoreet sed nisi sodales vestibulum. Mauris elit tellus, iaculis nec arcu non, fringilla lobortis turpis. Morbi vulputate commodo arcu convallis dignissim. Nunc ullamcorper lacus nunc, ac pulvinar diam rhoncus nec. Morbi suscipit ante enim, et euismod urna feugiat nec. Nam sodales congue lorem eleifend mattis.
+      </p>
+
+      <p>
+  Sed at efficitur mi. Phasellus pharetra interdum imperdiet. Vestibulum at urna finibus, imperdiet turpis a, convallis nulla. Morbi a sapien efficitur, luctus leo pulvinar, sodales nisi. Sed vitae justo sed ligula malesuada commodo eu id leo. Phasellus id imperdiet magna, id venenatis nisi. Sed lacinia elit ac erat consectetur, vel blandit erat tincidunt. Suspendisse aliquam dui lectus, ac imperdiet lacus pretium nec. Morbi condimentum turpis non massa rutrum tempus. Curabitur fringilla ex nisl, nec fermentum magna rutrum in. Nulla augue sem, dictum nec luctus in, ultricies in orci. Etiam id metus ac lectus porta mollis. Praesent sodales, lectus eget eleifend pretium, nulla sapien volutpat massa, id placerat purus est quis ipsum. Fusce ut maximus velit, sed maximus dui. Aliquam ac massa mattis, blandit elit a, accumsan libero.
+      </p>
+
+      <p>
+  Phasellus ac lacus hendrerit, scelerisque est vel, tincidunt justo. Donec porta porttitor enim, sed hendrerit ligula ullamcorper nec. Fusce aliquam diam vitae dui mattis sagittis. Morbi blandit lorem mi, vel mattis purus rutrum a. Sed vel diam eu sapien cursus dictum sed sit amet turpis. Integer venenatis elit ac tincidunt pellentesque. Mauris venenatis varius vehicula. Morbi id viverra leo, non suscipit sapien.
+      </p>
+
+      <p>
+  Maecenas facilisis risus laoreet neque auctor, et mollis dui accumsan. Donec nunc felis, pellentesque nec lacus eu, convallis ultricies leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sollicitudin ligula in posuere luctus. Aenean hendrerit dolor et arcu mollis consectetur. Nunc at consectetur est, id lacinia erat. Suspendisse sollicitudin pulvinar nisi at sollicitudin. Fusce at fringilla velit, at condimentum urna. In vitae ligula diam. Etiam bibendum erat non felis sodales convallis. Etiam nec rutrum eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+      </p>
+
+      <p>
+  Fusce facilisis porttitor nunc, sollicitudin venenatis lectus gravida porttitor. Morbi dui ipsum, placerat ut tortor vitae, ornare consectetur ex. Mauris egestas et elit sit amet euismod. Praesent vel risus non eros sodales mollis. Vivamus tortor ligula, sagittis ac elit eget, rhoncus condimentum tortor. Integer sit amet dui ullamcorper, blandit dui nec, maximus diam. In facilisis fringilla mauris a interdum. In aliquam gravida tellus sed vehicula. Nunc tristique orci eget bibendum interdum. In lectus lorem, condimentum vel diam at, tincidunt consequat arcu. Aliquam erat volutpat. Aenean varius justo a libero vestibulum hendrerit. Vestibulum faucibus dictum tincidunt. Vivamus rutrum elit sed cursus finibus. Proin ac vulputate ligula.
+      </p>
+    </div>
   </div>
-  <div class='content-grid grid__col grid__col--6-of-8 grid__col--centered'>
-    <h1>Bulletproof Android Syncing</h1>
-  </div>
-  <div class='content-grid grid__col grid__col--6-of-8 grid__col--centered'>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id lorem libero. Duis laoreet sed nisi sodales vestibulum. Mauris elit tellus, iaculis nec arcu non, fringilla lobortis turpis. Morbi vulputate commodo arcu convallis dignissim. Nunc ullamcorper lacus nunc, ac pulvinar diam rhoncus nec. Morbi suscipit ante enim, et euismod urna feugiat nec. Nam sodales congue lorem eleifend mattis.
-    </p>
-
-    <p>
-Sed at efficitur mi. Phasellus pharetra interdum imperdiet. Vestibulum at urna finibus, imperdiet turpis a, convallis nulla. Morbi a sapien efficitur, luctus leo pulvinar, sodales nisi. Sed vitae justo sed ligula malesuada commodo eu id leo. Phasellus id imperdiet magna, id venenatis nisi. Sed lacinia elit ac erat consectetur, vel blandit erat tincidunt. Suspendisse aliquam dui lectus, ac imperdiet lacus pretium nec. Morbi condimentum turpis non massa rutrum tempus. Curabitur fringilla ex nisl, nec fermentum magna rutrum in. Nulla augue sem, dictum nec luctus in, ultricies in orci. Etiam id metus ac lectus porta mollis. Praesent sodales, lectus eget eleifend pretium, nulla sapien volutpat massa, id placerat purus est quis ipsum. Fusce ut maximus velit, sed maximus dui. Aliquam ac massa mattis, blandit elit a, accumsan libero.
-    </p>
-
-    <p>
-Phasellus ac lacus hendrerit, scelerisque est vel, tincidunt justo. Donec porta porttitor enim, sed hendrerit ligula ullamcorper nec. Fusce aliquam diam vitae dui mattis sagittis. Morbi blandit lorem mi, vel mattis purus rutrum a. Sed vel diam eu sapien cursus dictum sed sit amet turpis. Integer venenatis elit ac tincidunt pellentesque. Mauris venenatis varius vehicula. Morbi id viverra leo, non suscipit sapien.
-    </p>
-
-    <p>
-Maecenas facilisis risus laoreet neque auctor, et mollis dui accumsan. Donec nunc felis, pellentesque nec lacus eu, convallis ultricies leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec sollicitudin ligula in posuere luctus. Aenean hendrerit dolor et arcu mollis consectetur. Nunc at consectetur est, id lacinia erat. Suspendisse sollicitudin pulvinar nisi at sollicitudin. Fusce at fringilla velit, at condimentum urna. In vitae ligula diam. Etiam bibendum erat non felis sodales convallis. Etiam nec rutrum eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-    </p>
-
-    <p>
-Fusce facilisis porttitor nunc, sollicitudin venenatis lectus gravida porttitor. Morbi dui ipsum, placerat ut tortor vitae, ornare consectetur ex. Mauris egestas et elit sit amet euismod. Praesent vel risus non eros sodales mollis. Vivamus tortor ligula, sagittis ac elit eget, rhoncus condimentum tortor. Integer sit amet dui ullamcorper, blandit dui nec, maximus diam. In facilisis fringilla mauris a interdum. In aliquam gravida tellus sed vehicula. Nunc tristique orci eget bibendum interdum. In lectus lorem, condimentum vel diam at, tincidunt consequat arcu. Aliquam erat volutpat. Aenean varius justo a libero vestibulum hendrerit. Vestibulum faucibus dictum tincidunt. Vivamus rutrum elit sed cursus finibus. Proin ac vulputate ligula.
-    </p>
-  </div>
-  <br>
 </div>
 
 </body>
