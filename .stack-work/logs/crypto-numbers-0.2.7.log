@@ -1,0 +1,19 @@
+Configuring crypto-numbers-0.2.7...
+Building crypto-numbers-0.2.7...
+Preprocessing library crypto-numbers-0.2.7...
+[1 of 7] Compiling Crypto.Number.Polynomial ( Crypto/Number/Polynomial.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/Polynomial.o )
+[2 of 7] Compiling Crypto.Number.Basic ( Crypto/Number/Basic.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/Basic.o )
+[3 of 7] Compiling Crypto.Number.F2m ( Crypto/Number/F2m.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/F2m.o )
+[4 of 7] Compiling Crypto.Number.Serialize ( Crypto/Number/Serialize.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/Serialize.o )
+[5 of 7] Compiling Crypto.Number.Generate ( Crypto/Number/Generate.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/Generate.o )
+[6 of 7] Compiling Crypto.Number.ModArithmetic ( Crypto/Number/ModArithmetic.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/ModArithmetic.o )
+
+Crypto/Number/ModArithmetic.hs:65:19: Warning:
+    In the use of ‘powModSecInteger’
+    (imported from GHC.Integer.GMP.Internals, but defined in integer-gmp:GHC.Integer.Type):
+    "The underlying GMP library does not support a secure version of powModInteger which is side-channel resistant - you need at least GMP version 5 to support this"
+[7 of 7] Compiling Crypto.Number.Prime ( Crypto/Number/Prime.hs, .stack-work/dist/x86_64-osx/Cabal-1.18.1.5/build/Crypto/Number/Prime.o )
+In-place registering crypto-numbers-0.2.7...
+Installing library in
+/Users/rorystephenson/.stack/snapshots/x86_64-osx/lts-2.21/7.8.4/lib/x86_64-osx-ghc-7.8.4/crypto-numbers-0.2.7
+Registering crypto-numbers-0.2.7...
